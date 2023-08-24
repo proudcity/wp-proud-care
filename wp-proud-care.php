@@ -18,7 +18,7 @@ function proudcity_care_add_to_admin_bar() {
         array(
             'id'    => 'proudcity-care-top-admin-bar',
             'title' => '<i class="fas fa-heart"></i> Care',
-            'href'  => admin_url('admin.php?page=proudcity-care-page'), // Link to your page
+            'href'  => admin_url('admin.php?page=proudcity-care-page'), // Link to ProudCity Care page
             'parent' => 'top-secondary' // Place the menu item on the right side
        )
     );
@@ -29,7 +29,7 @@ function proudcity_care_add_to_admin_bar() {
             'parent' => 'proudcity-care-top-admin-bar',
             'id'     => 'proudcity-care-documentation',
             'title'  => '<i class="fas fa-search"></i> Search help',
-            'href'   => 'https://help.proudcity.com/', // Link to your help ticket page
+            'href'   => 'https://help.proudcity.com/', // Link to ProudCity Help Center main page
             'meta'   => array(
                 'target' => '_blank' // Add the target attribute
             )
@@ -42,7 +42,7 @@ function proudcity_care_add_to_admin_bar() {
             'parent' => 'proudcity-care-top-admin-bar',
             'id'     => 'proudcity-care-help-ticket',
             'title'  => '<i class="fas fa-search"></i> Submit a help ticket',
-            'href'   => 'https://help.proudcity.com/support/', // Link to your help ticket page
+            'href'   => 'https://help.proudcity.com/support/', // Link to help ticket page
             'meta'   => array(
                 'target' => '_blank' // Add the target attribute
             )
