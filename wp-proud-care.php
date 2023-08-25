@@ -27,7 +27,7 @@ function proudcity_care_add_to_admin_bar() {
     $wp_admin_bar->add_menu(
         array(
             'parent' => 'proudcity-care-top-admin-bar',
-            'id'     => 'proudcity-care-documentation',
+            'id'     => 'proudcity-care-help',
             'title'  => '<i class="fas fa-search"></i> Search help',
             'href'   => 'https://help.proudcity.com/', // Link to ProudCity Help Center main page
             'meta'   => array(
@@ -40,14 +40,28 @@ function proudcity_care_add_to_admin_bar() {
     $wp_admin_bar->add_menu(
         array(
             'parent' => 'proudcity-care-top-admin-bar',
-            'id'     => 'proudcity-care-help-ticket',
-            'title'  => '<i class="fas fa-search"></i> Submit a help ticket',
+            'id'     => 'proudcity-care-training',
+            'title'  => '<i class="fa-solid fa-certificate"></i> Get training',
+            'href'   => 'https://proudcity.com/academy/', // Link to help ticket page
+            'meta'   => array(
+                'target' => '_blank' // Add the target attribute
+            )
+        )
+    );
+    
+    // Add child menu item under the parent
+    $wp_admin_bar->add_menu(
+        array(
+            'parent' => 'proudcity-care-top-admin-bar',
+            'id'     => 'proudcity-care-ticket',
+            'title'  => '<i class="fa-solid fa-circle-question"></i> Submit a help ticket',
             'href'   => 'https://help.proudcity.com/support/', // Link to help ticket page
             'meta'   => array(
                 'target' => '_blank' // Add the target attribute
             )
         )
     );
+
 }
 add_action('admin_bar_menu', 'proudcity_care_add_to_admin_bar', 999);
 
@@ -58,6 +72,7 @@ function proudcity_care_page_content() {
     // Add your page content here
     echo '<ul>';
     echo '<li><a href="https://help.proudcity.com/" target="_blank">Search help</a></li>';
+    echo '<li><a href="https://proudcity.com/academy/" target="_blank">Get training</a></li>';
     echo '<li><a href="https://help.proudcity.com/support/" target="_blank">Submit a help ticket</a></li>';
     echo '</ul>';
     echo '</div>';
